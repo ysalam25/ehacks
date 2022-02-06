@@ -94,3 +94,8 @@ color: #FFFFFF;
     background-color: #e2eafc;
     color: #000000;
 }
+
+.categoryDiv{
+    border: 2px solid red;
+    margin: top 100px;
+}
