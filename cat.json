@@ -1,0 +1,8 @@
+{
+    "SNRI": ["Desvenlafaxine (Pristiq)","Duloxetine (Cymbalta)", "Levomilnacipran (Fetzima)", "Venlafaxine (Effexor XR)", "Pristiq (desvenlafaxine)"],
+    "SSRI": ["Citalopram (Celexa)", "Escitalopram (Lexapro)", "Fluoxetine (Prozac)", "Paroxetine (Paxil, Pexeva)", "Sertraline (Zoloft)"],
+    "DRI": [],
+    "stimulants": [],
+    "non-stimulants": [],
+    "mood stabilizers": []
+}
