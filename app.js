@@ -54,7 +54,8 @@ app.get('/stimulants', () => {
 });
 
 
-app.use(express.static('view'));
+//app.use(express.static('view'));
+app.use("/view", express.static('./view/'));
 
 //listening to the port
 app.listen(port, () => {
