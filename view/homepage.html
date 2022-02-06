@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type = "text/javascript">
-        function getCategories(){
-            document.getElementByClassName("categoryDiv").innerHTML = `<button>Stimulants</button>
-            <button>Stimulants</button>`;};
-    </script>
+    <script type = "text/javascript" src="/view/functions.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <title>PrescriptMe</title>
-    <script type="text/javascript" src ="../functions.js"></script>
 </head>
 <body>
     <div class="header">
@@ -24,12 +19,8 @@
 
     <h1 class="title">PrescriptMe</h1>
     <h3 class="slogan">Read and share unique insights about your meds before you take them. </h3>
-    <div class="browserDiv">
-        <button type="button" class="browseBtn" onclick="getCategories()">Browse</button>
-        <a href="stimulants.html">hi</a>
-    </div>
     <img src="https://cdn.the-scientist.com/assets/articleNo/69373/hImg/44125/diverse-banner-x.webp">
-    <div class="browserDiv"><button class="browseBtn">Browse</button></div>
+    <div class="browserDiv"><button class="browseBtn" onclick="getCategories()">Browse</button></div>
     <div class="categoryDiv"></div>
 
     
