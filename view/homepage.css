@@ -4,9 +4,8 @@
     height: 130px;
     left: 0px;
     top: 0px;
-
     background: #B6CCFE;
-    border: 5px solid red;
+
 }
 
 .companyname{
@@ -22,7 +21,7 @@
     line-height: 45px;
 
     color: #000000;
-    border: 5px solid red;
+
 }
 
 .title{
@@ -39,7 +38,6 @@
     line-height: 137px;
 
     color: #000000;
-    border: 5px red;
 }
 
 .slogan{
@@ -56,25 +54,43 @@
     line-height: 25px;
 
     color: #000000;
-    border: 5px solid red;
+    
 }
 
 img{
-    position: absolute;
+    position: relative;
     width: 867px;
     height: 392px;
     left: 755px;
     top: 189px;
-    border: 5px red;
+    
 }
 
-.categoryDiv{
-    background-color: red;
-    border: 5px red;
+.content{
+    width: 800px;
+    height: 500px;
 }
 
-.info{
-    background-color: red;
-    border: 5px solid red;
-   
+.browseBtn{
+    position: absolute;
+width: 208px;
+height: 59px;
+left: 256px;
+top: 484px;
+background: #B6CCFE;
+color: white;
+border: none;
+
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 33px;
+
+color: #FFFFFF;
+}
+
+.browseBtn:hover{
+    background-color: #e2eafc;
+    color: #000000;
 }
