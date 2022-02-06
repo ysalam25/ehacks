@@ -97,6 +97,84 @@ color: #FFFFFF;
 }
 
 .categoryDiv{
-    border: 2px solid red;
-    margin-top: 188px;
+    margin-top: 250px;
 }
+
+#ssris{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 208px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
+#snris{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 208px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
+#dris{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 208px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
+#stimulants{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 208px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
+#nonstimulants{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 280px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
+#moodstabilizers{
+    background: #B6CCFE;
+    margin-left: 10px;
+color: white;
+border: none;
+width: 308px;
+height: 59px;
+font-family: 'Readex Pro', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+}
+
