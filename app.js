@@ -36,7 +36,7 @@ db.connect((err) => {
       throw err;
   }
   console.log('Connected to database - app.js');
-  });
+});
 
 // ensure db can be used globally
 global.db = db;
@@ -53,8 +53,29 @@ app.get('/stimulants', () => {
     res.redirect('/stimulants.html');
 });
 
+// getting the posts from the database for a specified medication/filter
+app.get('/get-posts', (request, response) => {
+    let drugID = request.query.medID;      // holds the id of the medication requested by the user
+    let respons;
+    // query to get the posts under a certain drug id WHERE drugID = '${drugID}'
+    db.query(`SELECT * FROM Post `, (err, rows, fields) => {
+        respons = rows;
+        response.send(rows);
+    });
+    
+});
 
-//app.use(express.static('view'));
+// letting the user write their data to the database
+app.post('post-content', (req, res) => {
+  let postNo = req.query.postNo;
+  let content = "";
+  let ageGroup = "";
+  let gender = "";
+
+});
+
+
+
 app.use("/view", express.static('./view/'));
 
 //listening to the port
