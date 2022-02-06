@@ -1,4 +1,4 @@
-const { ADDRGETNETWORKPARAMS } = require("dns");
+//const { ADDRGETNETWORKPARAMS } = require("dns");
 
 function getCategories(){
     document.getElementById("category").innerHTML = `<button id="snris">SNRIs</button>
@@ -142,14 +142,18 @@ function postForm(){
     let text = document.getElementsByName('textbox').values;
     let xReq = new XMLHttpRequest();     // create new XMLHttpRequest object
     // display posts on the drug after the response from the server come back
-    xReq.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-        alert("Posting Successful!");};
-    };
+    xReq.onreadystatechange = posted;
     xReq.open('GET',`/write-posts?age=${age}&&gender=${gender}&&content=${text}`, true);        // asynch call so user can answer questions out of order/over again
     xReq.send();     //send request
 }
 
+function posted(){
+    if(this.readyState == 4 && this.status == 200){
+        alert("Posting Successful!");
+    } else {
+        console.log(this);
+    }
+};
 
 // handles the behaviour after the request object
 function addPosts(xReq, drugID){

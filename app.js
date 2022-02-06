@@ -67,17 +67,31 @@ app.get('/get-posts', (request, response) => {
 });
 
 // letting the user write their data to the database
-app.post('/write-posts', (req, res) => {
+app.get('/write-posts', (req, res) => {
   let age = req.query.age;
   let gender = req.query.gender;
-  let content = req. query.gender;
+  let content = req.query.textcontent;
   let rec = req.query.rec;
+  if (rec === "Yes"){
+      rec = 0;
+  } else {
+    rec = 1;
+  }
+  console.log(content, age, gender, rec);
 
   db.query(`INSERT INTO Post VALUES (
-    
-  )`
-
-  );
+    5,
+    '${content}',
+    '${age}',
+    '${gender}',
+    0,
+    0,
+    '${rec}',
+    'user1'
+  )`, (err, rows, fields) => {
+   response.send(err);
+   console.log(err);
+  });
 });
 
 
