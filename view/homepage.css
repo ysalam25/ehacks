@@ -13,7 +13,7 @@
     width: 296px;
     height: 47px;
     left: 33px;
-
+    top:25px;
     font-family: 'Readex Pro', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -52,18 +52,19 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-
+    z-index:1;
     color: #000000;
     
 }
 
 img{
     position: relative;
-    width: 867px;
+    width: 800px;
     height: 392px;
-    left: 755px;
+    left: 720px;
     top: 189px;
-    
+    z-index:0;
+    object-fit: fit;
 }
 
 .content{
