@@ -20,6 +20,7 @@ app.use(fileUpload()); // configure file upload
 
 // use mySQL
 const mysql = require('mysql');
+const res = require('express/lib/response');
 
 // create the connection
 const db = mysql.createConnection({
@@ -43,9 +44,14 @@ global.db = db;
 //getting the root path(homepage)
 app.get('/', (req, res) => {
     res.redirect('/homepage.html');
-})
+});
 
 //get the browse categories
+
+// redirect to stims page
+app.get('/stimulants', () => {
+    res.redirect('/stimulants.html');
+});
 
 
 app.use(express.static('view'));
