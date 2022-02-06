@@ -77,14 +77,78 @@ function readPosts(){
 
 // handles writing a post for a medication
 function writePosts(){
-    let document;
+    document.getElementById("contentDiv").innerHTML= ` <form id="post-form">
+        <div>
+            <h3>Age</h3>
+            <label class="container">
+            <input name= "age" type="radio" value ="14-19">
+            <span></span>14-19
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "age" value="20-39">
+            <span></span>20-39
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "age" value="40-65">
+            <span></span>40-65
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "age" value="65+">
+            <span></span>65+
+        </label>
+        </div>
+
+        <div>
+            <h3>Gender</h3>
+            <label class="container">
+            <input type="radio" name= "gender" value="Female">
+            <span></span>Female
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "gender" value = "Male">
+            <span></span>Male
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "gender" value="Other">
+            <span></span>Other
+        </label></br>
+        </div>
+        <div>
+            <h2>Post Contents</h2>
+            <label class="container">
+            <textarea name="textcontent"></textarea>
+        </label></br>
+        </div>
+        <div>
+            <h3>Would you recommend this?</h3>
+            <label class="container">
+            <input type="radio" name= "rec" value="Yes">
+            <span></span>Yes
+        </label></br>
+        <label class="container">
+            <input type="radio" name= "rec" value = "No">
+            <span></span>No
+        </label></br>
+        </div>
+        </br></br>
+        <button onclick="postForm()" id="submit">Post</button>
+        </form> `
+}
+function postForm(){
+    // get all elements w name = "age"
+    let age = document.getElementsByName('age').values;
+    // get all w name = "gender"
+    let gender = document.getElementsByName('gender').values;
+    let text = document.getElementsByName('textbox').values;
     let xReq = new XMLHttpRequest();     // create new XMLHttpRequest object
     // display posts on the drug after the response from the server come back
-    xReq.onreadystatechange = function(){alert("Posting Successful!");};
-    xReq.open('GET',`/write-posts?content=${text}`, true);        // asynch call so user can answer questions out of order/over again
+    xReq.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+        alert("Posting Successful!");};
+    };
+    xReq.open('GET',`/write-posts?age=${age}&&gender=${gender}&&content=${text}`, true);        // asynch call so user can answer questions out of order/over again
     xReq.send();     //send request
 }
-
 
 
 // handles the behaviour after the request object

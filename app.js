@@ -21,6 +21,7 @@ app.use(fileUpload()); // configure file upload
 // use mySQL
 const mysql = require('mysql');
 const res = require('express/lib/response');
+const { connect } = require('http2');
 
 // create the connection
 const db = mysql.createConnection({
@@ -66,12 +67,17 @@ app.get('/get-posts', (request, response) => {
 });
 
 // letting the user write their data to the database
-app.post('post-content', (req, res) => {
-  let postNo = req.query.postNo;
-  let content = "";
-  let ageGroup = "";
-  let gender = "";
+app.post('/write-posts', (req, res) => {
+  let age = req.query.age;
+  let gender = req.query.gender;
+  let content = req. query.gender;
+  let rec = req.query.rec;
 
+  db.query(`INSERT INTO Post VALUES (
+    
+  )`
+
+  );
 });
 
 
